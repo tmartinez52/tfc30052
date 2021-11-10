@@ -4,7 +4,7 @@ provider "google" {
   zone = var.zone
 }
 
-resource "google_project_service" "cloud_build" {
+resource "google_project_service" "project" {
   project = var.project
   service = "cloudbuild.googleapis.com"
 
