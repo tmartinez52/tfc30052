@@ -4,7 +4,7 @@ provider "google" {
   zone = var.zone
 }
 
-resource "google_project_services" "project" {
+resource "google_project_service" "project" {
   project = var.project
   service = "cloudbuild.googleapis.com"
 
@@ -12,6 +12,4 @@ resource "google_project_services" "project" {
     create = "20m"
     update = "5m"
   }
-
-  disable_dependent_services = true
 }
